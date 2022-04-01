@@ -1,0 +1,107 @@
+\documentclass{article}
+
+%vamos a exportar
+\usepackage{amsmath}  %matrices
+\usepackage{graphicx} %imagenes
+
+%precargar ruta de imagenes
+\graphicspath{ {Imagenes/} }
+
+\title{Hello WORLD!!}
+\author{Said García}
+\date{29 de Marzo 2022}
+
+\begin{document}
+
+  \begin{titlepage}
+    \maketitle
+    \begin{abstract}
+      Este es un documento de pruebas que servirá \par
+      a manera de playground
+    \end{abstract}
+    \begin{center}
+      Este texto se supone aparecerá en el centro
+      
+      Con la relación $x=y$  \par
+      %aqui se inserta la imagen
+      \includegraphics{cide.jpg}
+    \end{center}
+
+  \end{titlepage}
+
+  
+  \begingroup
+    \begin{section}*{Esta va a ser la de puro texto}
+      \paragraph*{Así es como se inicia el párrafo}
+      Lorem Ipsum is simply dummy text of the printing and typesetting 
+      industry. Lorem Ipsum has been the industry's standard dummy text 
+      ever since the 1500s, when an unknown printer took a galley of type
+       and scrambled it to make a type specimen book. It has survived 
+       not only five centuries, but also the leap into electronic 
+       typesetting, remaining essentially unchanged. It was popularised 
+       in the 1960s with the release of Letraset sheets containing Lorem 
+       Ipsum passages, and more recently with desktop publishing software 
+      like Aldus PageMaker including versions of Lorem Ipsum. 
+      \par
+  
+      %así se escribe una cita
+      \begin{quote}
+        No puede comprenderse nada del saber económico si no se sabe cómo se 
+        ejercía, en su cotidianeidad, el poder, y el poder económico. - Michel 
+        Foucalt.
+        \par 
+      \end{quote}
+
+      
+      \paragraph*{Este es un párrafo alineado a la izquierda}
+
+  \endgroup
+
+  %así se da un salto de página
+  \newpage
+
+  \begingroup
+  %título de una sección
+    \section*{Formas de iniciar el modo maténamtico}
+      %con \[\] es para ecuaciones/modelos cortos (preferiblemente)
+      \[ TMS = \frac{
+          \frac{
+            \partial U}
+          {
+            \partial X_1}
+        }
+        {
+          \frac{
+            \partial U}
+          {
+            \partial X_2
+          }
+        }
+      \]
+
+      %Para hacer incersiones dentro de un bloque de texto se usa \(\)
+      \paragraph[¿Aquí que es?]{Vamos a iniciar un párrafo otra vez}
+      El cociente de precios se expresa: \(\frac{P_1}{P_2}\) \par
+      
+      %para una secuencia de varias entradas metemáticas usamos:
+      \begin{math}
+        \int_a^b X^2 - (Y-a)^2  \\
+        \int^a_b X^2 - ( Y^2 -2Y 4 )
+        \\
+        \\
+        \sqrt{x_1^3}
+        \\
+        \\
+      \end{math}
+      %Para una matriz, es necesario exportar el packete "amsmath"
+      \begin{math}
+        \begin{bmatrix}
+          2 & 5 & 9 \\
+          3 & 6 & 0 \\
+          4 & 7 & 1
+        \end{bmatrix}
+      \end{math}
+  \endgroup
+
+
+\end{document}
